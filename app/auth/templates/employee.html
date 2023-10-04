@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+    <div class="container books">
+     <h1>Employee Table</h1>
+ <div class="row">
+        
+            <div class="col-md-4">
+                <table class="table">
+                <thead>
+                 <tr>
+                   <th scope="col">is admin</th>
+                  <th scope="col">first name</th>
+                  <th scope="col">last name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">job_title</th>
+                  <th scope="col">actions</th>
+
+                </tr>
+            {% for user in users%}
+              <tbody>
+               <tr>
+                <th scope="row">{{user.is_admin}}</th>
+                <td>{{user.first_name }}</td>
+                <td>{{user.last_name}}</td>
+                <td>{{user.user_email}}</td>
+                <td>{{ user.job_title }}</td>
+                <td>
+                   <span class="label label-success "><a href="#" style="color: fl>
+<white"> create </a></span>
+
+                <span class="label label-primary"><a href="#" style="color: floralwhite>
+                <span class="label label-info"><a href="#" style="color: floralwhite">
+                </td>
+                </tr>
+                </tbody>
+               </table>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+{% endblock content %}
+
